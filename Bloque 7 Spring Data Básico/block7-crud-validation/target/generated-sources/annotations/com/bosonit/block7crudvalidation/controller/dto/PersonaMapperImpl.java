@@ -1,6 +1,6 @@
 package com.bosonit.block7crudvalidation.controller.dto;
 
-import com.bosonit.block7crudvalidation.domain.Persona;
+import com.bosonit.block7crudvalidation.domain.entity.Persona;
 import javax.annotation.processing.Generated;
 
 @Generated(
