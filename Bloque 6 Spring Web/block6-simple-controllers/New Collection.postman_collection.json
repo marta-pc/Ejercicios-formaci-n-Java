@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "94b348cf-c6d0-4418-907c-ebcd6d793481",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24559919"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Marta\",\r\n    \"edad\": 30,\r\n    \"ciudad\": \"Madrid\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http//localhost:8080/useradd",
+					"host": [
+						"http"
+					],
+					"path": [
+						"",
+						"localhost:8080",
+						"useradd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Marta\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http//localhost:8080//user/{nombre}",
+					"host": [
+						"http"
+					],
+					"path": [
+						"",
+						"localhost:8080",
+						"",
+						"user",
+						"{nombre}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
