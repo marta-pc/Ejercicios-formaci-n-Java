@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/bloque-1-jdk/pom.xml" />
+        <option value="$PROJECT_DIR$/Bloque 6 Spring Web/block6-simple-controllers/pom.xml" />
+        <option value="$PROJECT_DIR$/Bloque 6 Spring Web/block6-person-controllers/pom.xml" />
+        <option value="$PROJECT_DIR$/Bloque 7 Spring Data Básico/block7-crud/pom.xml" />
+        <option value="$PROJECT_DIR$/Bloque 7 Spring Data Básico/block7-crud-validation/pom.xml" />
+        <option value="$PROJECT_DIR$/JPA-Cascade/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

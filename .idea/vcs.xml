@@ -2,5 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Bloque 3 Maven, Git/block3-create-repo-git/COPIAPROYECTOGIT" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Marta-Pangusion-repo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/bloque-1-jdk" vcs="Git" />
   </component>
 </project>
