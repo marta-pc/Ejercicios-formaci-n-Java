@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: block5.commandlinerunner.CommandLineRunnerApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.722 s <<< FAILURE! - in block5.commandlinerunner.CommandLineRunnerApplicationTests
+contextLoads  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'claseSecundaria' defined in class path resource [block5/commandlinerunner/ClaseSecundaria.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=claseSecundaria; factoryMethodName=claseSecundaria; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [block5/commandlinerunner/ClaseSecundaria.class]] for bean 'claseSecundaria': There is already [Generic bean: class [block5.commandlinerunner.ClaseSecundaria]; scope=singleton; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [C:\Users\marta.pangusion\IdeaProjects\Marta-Pangusion-repo\SpringBoot\block5-command-line-runner\target\classes\block5\commandlinerunner\ClaseSecundaria.class]] bound.
+
