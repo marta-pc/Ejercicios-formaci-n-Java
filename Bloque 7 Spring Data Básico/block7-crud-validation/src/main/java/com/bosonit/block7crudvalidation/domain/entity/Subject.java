@@ -16,7 +16,7 @@ public class Subject {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_asignatura", nullable = false)
-    private int idsubj;
+    private int id;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_student")

@@ -1,5 +1,6 @@
 package com.bosonit.block7crudvalidation.domain.entity;
 
+import com.bosonit.block7crudvalidation.infrastructure.controller.dto.output.PersonOutputDto;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -9,7 +10,7 @@ import java.util.Date;
 
 @Table(name="Persona")
 
-public class Persona {
+public class Person {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     @Column(name = "id_persona")
@@ -32,4 +33,5 @@ public class Persona {
     @OneToOne(cascade = CascadeType.ALL)
     private Profesor profesor;
 
-    }
+
+}

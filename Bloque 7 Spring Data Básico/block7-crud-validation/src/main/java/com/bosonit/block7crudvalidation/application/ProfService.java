@@ -5,9 +5,9 @@ import com.bosonit.block7crudvalidation.domain.entity.Profesor;
 import java.util.List;
 
 public interface ProfService {
-    Profesor getById(String id);
+    Profesor getById(int id);
     List<Profesor> getAll();
-    void addProf(Profesor profesor, int personaId);
-    void deleteById(String id);
-    void updateProf(String id, Profesor profesor);
+    void addProf(Profesor profesor, int personId);
+    void deleteById(int id);
+    void updateProf(int id, Profesor profesor);
 }

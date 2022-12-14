@@ -1,6 +1,7 @@
 package com.bosonit.block7crudvalidation.application;
 
-import com.bosonit.block7crudvalidation.infrastructure.controller.dto.output.PersonaOutputDto;
+import com.bosonit.block7crudvalidation.domain.entity.Person;
+import com.bosonit.block7crudvalidation.domain.exception.UnprocessableEntityException;
 import com.bosonit.block7crudvalidation.domain.exception.EntityNotFoundException;
 import com.bosonit.block7crudvalidation.domain.entity.Profesor;
 import com.bosonit.block7crudvalidation.domain.repository.ProfRepository;
@@ -10,7 +11,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Objects;
 
 @Service
 @AllArgsConstructor
@@ -18,13 +18,12 @@ import java.util.Objects;
 public class ProfServiceImp implements ProfService{
 
     private ProfRepository profRepository;
-    private PersonaService personaService;
+    private PersonService personService;
     private StudentRepository studentRepository;
 
 
     @Override
-    public Profesor getById(String id) {
-        Objects.requireNonNull(id);
+    public Profesor getById(int id) {
         return profRepository.findById(id)
                 .orElseThrow(()-> new EntityNotFoundException("Id no encontrado"));
     }
@@ -36,17 +35,29 @@ public class ProfServiceImp implements ProfService{
 
     @Override
     public void addProf(Profesor profesor, int personaId) {
-        PersonaOutputDto persona = personaService.getPersonaById(personaId);
-        if(persona.getStudent()!=null)
+        Person persona = personService.getPersonById(personaId);
+        if(persona.getStudent()!=null || persona.getProfesor()!=null){
+            throw new UnprocessableEntityException("El ID introducido ya está asignado");
+        }
+        profesor.setPerson(persona);
+        persona.setProfesor(profesor);
+        profRepository.save(profesor);
     }
 
     @Override
-    public void deleteById(String id) {
+    public void deleteById(int id) {
+        Profesor profesor = this.getById(id);
+        profesor.getStudents().forEach(student ->{
+            student.setProfesor(null);
+            studentRepository.save(student);
+        });
+        profRepository.deleteById(id);
 
     }
 
     @Override
-    public void updateProf(String id, Profesor profesor) {
-
+    public void updateProf(int id, Profesor profesor) {
+        this.getById(id);
+        profRepository.save(profesor);
     }
 }

@@ -17,18 +17,19 @@ public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_student", nullable = false)
-    private int idstudent;
+    private int id;
 
     @OneToOne (cascade = CascadeType.ALL)
     @JoinColumn(name = "id_persona")
-    private Persona persona;
+    private Person persona;
+
 
     @Column(name = "num_hours_week")
     private int hours;
 
     private String comments;
 
-    @ManyToOne (cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "id_profesor")
     private Profesor profesor;
 
