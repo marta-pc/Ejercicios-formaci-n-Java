@@ -1,0 +1,567 @@
+{
+	"info": {
+		"_postman_id": "c8a951e4-962b-4470-8749-3a826abee158",
+		"name": "CrudValidation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "addStudent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"person\": {\r\n        \"usuario\": \"Pablo\",\r\n        \"password\": \"password\",\r\n        \"name\": \"Pablo\",\r\n        \"surname\": \"Napo\",\r\n        \"company_email\": \"napole\",\r\n        \"personal_email\": \"d\",\r\n        \"city\": \"Sevilla\",\r\n        \"active\": false,\r\n        \"imagen_url\": \"asd\"\r\n    },\r\n    \"comments\": \"El mejor profesor del mundo\",\r\n    \"branch\": \"Backend\",\r\n\r\n    \"profesor\": {\r\n        \"person\": {\r\n            \"usuario\": \"Pablo\",\r\n            \"password\": \"password\",\r\n            \"name\": \"Pablo\",\r\n            \"surname\": \"Napo\",\r\n            \"company_email\": \"napole\",\r\n            \"personal_email\": \"d\",\r\n            \"city\": \"Sevilla\",\r\n            \"active\": false,\r\n            \"imagen_url\": \"asd\"\r\n        },\r\n        \"comments\": \"El mejor profesor del mundo\",\r\n        \"branch\": \"Backend\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/estudiante",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estudiante"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStudent",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comments\": \"fcdgfsg\",\r\n    \"branch\": \"Backend\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/estudiante/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estudiante",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteStudent",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comments\": \"fcdgfsg\",\r\n    \"branch\": \"Backend\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/estudiante/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estudiante",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getStudent",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comments\": \"fcdgfsg\",\r\n    \"branch\": \"Backend\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/estudiante/2?ouputType=full",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estudiante",
+								"2"
+							],
+							"query": [
+								{
+									"key": "ouputType",
+									"value": "full"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getStudent all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comments\": \"fcdgfsg\",\r\n    \"branch\": \"Backend\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/estudiante/2?ouputType=full",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estudiante",
+								"2"
+							],
+							"query": [
+								{
+									"key": "ouputType",
+									"value": "full"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Subject",
+			"item": [
+				{
+					"name": "addSubject",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"person\": {\r\n        \"usuario\": \"Pablo\",\r\n        \"password\": \"password\",\r\n        \"name\": \"Pablo\",\r\n        \"surname\": \"Napo\",\r\n        \"company_email\": \"napole\",\r\n        \"personal_email\": \"d\",\r\n        \"city\": \"Sevilla\",\r\n        \"active\": false,\r\n        \"imagen_url\": \"asd\"\r\n    },\r\n    \"comments\": \"El mejor profesor del mundo\",\r\n    \"branch\": \"Backend\",\r\n\r\n    \"profesor\": {\r\n        \"person\": {\r\n            \"usuario\": \"Pablo\",\r\n            \"password\": \"password\",\r\n            \"name\": \"Pablo\",\r\n            \"surname\": \"Napo\",\r\n            \"company_email\": \"napole\",\r\n            \"personal_email\": \"d\",\r\n            \"city\": \"Sevilla\",\r\n            \"active\": false,\r\n            \"imagen_url\": \"asd\"\r\n        },\r\n        \"comments\": \"El mejor profesor del mundo\",\r\n        \"branch\": \"Backend\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/estudiante",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estudiante"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateSubject",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comments\": \"fcdgfsg\",\r\n    \"branch\": \"Backend\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/estudiante/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estudiante",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteSubject",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comments\": \"fcdgfsg\",\r\n    \"branch\": \"Backend\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/estudiante/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estudiante",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSubject",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comments\": \"fcdgfsg\",\r\n    \"branch\": \"Backend\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/estudiante/2?ouputType=full",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estudiante",
+								"2"
+							],
+							"query": [
+								{
+									"key": "ouputType",
+									"value": "full"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSubject all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comments\": \"fcdgfsg\",\r\n    \"branch\": \"Backend\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/estudiante/2?ouputType=full",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"estudiante",
+								"2"
+							],
+							"query": [
+								{
+									"key": "ouputType",
+									"value": "full"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profesor",
+			"item": [
+				{
+					"name": "addProf",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"person\": {\r\n        \"usuario\": \"Pablo\",\r\n        \"password\": \"password\",\r\n        \"name\": \"Pablo\",\r\n        \"surname\": \"Napo\",\r\n        \"company_email\": \"napole\",\r\n        \"personal_email\": \"d\",\r\n        \"city\": \"Sevilla\",\r\n        \"active\": false,\r\n        \"imagen_url\": \"asd\"\r\n    },\r\n\r\n    \"comments\": \"El mejor profesor del mundo\",\r\n    \"branch\": \"Backend\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/profesores",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"profesores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProf",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comments\": \"asdf\",\r\n    \"branch\": \"Backend\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/profesores/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"profesores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProf",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/profesores/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"profesores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProf",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/profesores/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"profesores",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProf All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/profesores/equipo_docente",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"profesores",
+								"equipo_docente"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Person",
+			"item": [
+				{
+					"name": "addPerson",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuario\": \"Pablo\",\r\n    \"password\": \"password\",\r\n    \"name\": \"Pablo\",\r\n    \"surname\": \"Napo\",\r\n    \"company_email\": \"napole\",\r\n    \"personal_email\": \"d\",\r\n    \"city\": \"Sevilla\",\r\n    \"active\": false,\r\n    \"imagen_url\": \"asd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/persona",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"persona"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePerson",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"usuario\": \"Laura\",\r\n    \"password\": \"password\",\r\n    \"name\": \"Pablo\",\r\n    \"surname\": \"Napo\",\r\n    \"company_email\": \"napole\",\r\n    \"personal_email\": \"d\",\r\n    \"city\": \"Sevilla\",\r\n    \"active\": false,\r\n    \"imagen_url\": \"asd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/persona/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"persona",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePerson",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/persona/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"persona",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPerson",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/persona/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"persona",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPeople",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/persona/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"persona",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
