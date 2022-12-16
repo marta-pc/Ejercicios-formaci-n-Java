@@ -5,8 +5,9 @@ import lombok.Data;
 @Data
 
 public class SubjInputDto {
-    private int idStudent;
+    private int id;
     private String subject;
     private String comments;
+
 
 }

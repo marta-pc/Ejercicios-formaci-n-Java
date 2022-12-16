@@ -1,9 +1,10 @@
 package com.bosonit.block7crudvalidation.domain.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.Instant;
 import java.util.Date;
 
 @Getter
@@ -15,10 +16,10 @@ public class Subject {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_asignatura", nullable = false)
+    @Column(name = "id_asignatura")
     private int id;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "id_student")
     private Student student;
 
@@ -28,7 +29,7 @@ public class Subject {
     private String comments;
 
     @Column (nullable = false)
-    private Date initial_date;
+    private Date initial_date = Date.from(Instant.now());
 
     private Date finish_date;
 

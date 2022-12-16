@@ -5,8 +5,8 @@ import lombok.Data;
 @Data
 
 public class StudentInputDto {
-    private int personaId;
+    PersonInputDto person;
     private String comments;
     private String Branch;
-    private int profesorId;
+    ProfInputDto profesor;
 }

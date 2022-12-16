@@ -7,6 +7,7 @@ import com.bosonit.block7crudvalidation.domain.repository.PersonRepository;
 import com.bosonit.block7crudvalidation.infrastructure.controller.dto.input.PersonInputDto;
 import com.bosonit.block7crudvalidation.infrastructure.controller.dto.output.PersonOutputDto;
 import com.bosonit.block7crudvalidation.infrastructure.mapper.PersonMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
@@ -16,19 +17,19 @@ import java.util.List;
 @Service
 public class PersonServiceImp implements PersonService{
 
+    @Autowired
     private PersonRepository personRepository;
 
     @Override
     public PersonOutputDto addPerson(PersonInputDto person){
 
-        personRepository.save(PersonMapper.Instance.personInputDtoToPerson(person));
-        return PersonMapper.Instance.personInputDtoToPersonOutDto(person);
+        Person person1 = personRepository.save(PersonMapper.Instance.personInputDtoToPerson(person));
+        return PersonMapper.Instance.personToPersonOutputDto(person1);
     }
 
     @Override
     public Person getPersonById(int id){
-        return personRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Id no encontrado"));
+        return personRepository.findById(id) .orElseThrow(() -> new EntityNotFoundException("Id no encontrado"));
     }
 
 
@@ -44,8 +45,9 @@ public class PersonServiceImp implements PersonService{
 
 
     @Override
-    public Person updatePerson(Person person) {
-        personRepository.findById(person.getId()).orElseThrow();
+    public Person updatePerson(int id, Person person) {
+        personRepository.findById(id).orElseThrow();
+        person.setId(id);
         return personRepository.save(person);
     }
 

@@ -1,7 +1,13 @@
 package com.bosonit.block7crudvalidation.infrastructure.controller.dto.output;
 
-public class SubjOutputDto {
-    private int idsubj;
-    private String comments;
+import lombok.Data;
 
+import java.util.Date;
+
+@Data
+public class SubjOutputDto {
+    private int id;
+    private String subject;
+    private String comments;
+    private Date initial_date;
 }

@@ -5,6 +5,7 @@ import com.bosonit.block7crudvalidation.application.PersonServiceImp;
 import com.bosonit.block7crudvalidation.domain.entity.Person;
 import com.bosonit.block7crudvalidation.infrastructure.controller.dto.input.PersonInputDto;
 import com.bosonit.block7crudvalidation.infrastructure.controller.dto.output.PersonOutputDto;
+import com.bosonit.block7crudvalidation.infrastructure.mapper.PersonMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,17 +29,15 @@ public class PersonController {
 
 
     @PutMapping("/{id}")
-    public ResponseEntity<PersonOutputDto> updatePerson(@RequestBody PersonInputDto person) {
-        try {
-            personService.getPersonById(person.getId());
-            return  ResponseEntity.ok().body(personService.addPerson(person));
-        } catch (Exception e) {
-            return ResponseEntity.notFound().build();
-        }
+    public ResponseEntity<PersonOutputDto> updatePerson(@PathVariable int id, @RequestBody PersonInputDto person) {
+            Person person1 = PersonMapper.Instance.personInputDtoToPerson(person);
+            PersonOutputDto person2 = PersonMapper.Instance.personToPersonOutputDto(personService.updatePerson(id, person1));
+            return  ResponseEntity.ok().body(person2);
+
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deletePersonById(@RequestParam int id) {
+    public ResponseEntity<String> deletePersonById(@PathVariable int id) {
         try {
             personService.deletePersonById(id);
             return ResponseEntity.ok().body("Persona con id: "+id+" ha sido eliminada");
@@ -60,10 +59,10 @@ public class PersonController {
 
 
 
-    @GetMapping("/persona")
-    public List<Person> getPeople(){
+    @GetMapping("/personas")
+    public List<PersonOutputDto> getPeople(){
 
-        return personService.getPeople();
+        return personService.getPeople().stream().map(person -> PersonMapper.Instance.personToPersonOutputDto(person)).toList();
 
     }
 

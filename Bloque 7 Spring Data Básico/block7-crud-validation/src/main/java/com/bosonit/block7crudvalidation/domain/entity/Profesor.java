@@ -1,6 +1,6 @@
 package com.bosonit.block7crudvalidation.domain.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;

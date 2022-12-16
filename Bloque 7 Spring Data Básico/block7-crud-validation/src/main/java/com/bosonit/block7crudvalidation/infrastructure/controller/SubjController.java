@@ -19,11 +19,11 @@ public class SubjController {
     private SubjService subjService;
 
     @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping
-    public void addSubject(@RequestBody SubjInputDto subjInputDto) {
-        Subject studentsStudies =
+    @PostMapping("/{id}")
+    public void addSubject(@RequestBody SubjInputDto subjInputDto, @PathVariable int id) {
+        Subject subject =
                 SubjMapper.INSTANCE.subjInputDtoToSubject(subjInputDto);
-        subjService.addSubject(studentsStudies, subjInputDto.getIdStudent());
+        subjService.addSubject(subject,id);
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)

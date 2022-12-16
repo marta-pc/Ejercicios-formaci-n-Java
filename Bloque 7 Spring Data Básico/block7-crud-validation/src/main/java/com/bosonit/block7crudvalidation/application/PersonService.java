@@ -14,6 +14,6 @@ public interface PersonService {
 
     void deletePersonById(int id);
     List<Person> getPeople();
-    Person updatePerson(Person person);
+    Person updatePerson(int id, Person person);
 }
 

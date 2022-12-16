@@ -24,7 +24,7 @@ public class StudentController {
     @PostMapping
     public void addStudent(@RequestBody StudentInputDto studentInputDto){
         Student student = StudentMapper.INSTANCE.studentInputDtoToStudent(studentInputDto);
-        studentService.addStudent(student, studentInputDto.getPersonaId(), studentInputDto.getProfesorId());
+        studentService.addStudent(student);
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
@@ -36,7 +36,7 @@ public class StudentController {
     @PutMapping("{id}")
     public void updateStudent(@PathVariable int id, @RequestBody StudentInputDto studentInputDto) {
         Student student = StudentMapper.INSTANCE.studentInputDtoToStudent(studentInputDto);
-        studentService.getById(id);
+        studentService.updateStudent(id,student);
     }
 
     @GetMapping("{id}")

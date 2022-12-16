@@ -1,22 +1,23 @@
 package com.bosonit.block7crudvalidation.domain.entity;
 
-import jakarta.persistence.*;
+
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Setter
 @Getter
 @Entity
-@Table(name= "estudiante_asignatura")
+@Table(name= "estudiantes")
 
 public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_student", nullable = false)
+    @Column(name = "id_student")
     private int id;
 
     @OneToOne (cascade = CascadeType.ALL)
@@ -29,7 +30,7 @@ public class Student {
 
     private String comments;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_profesor")
     private Profesor profesor;
 
@@ -38,6 +39,9 @@ public class Student {
 
     @OneToMany(mappedBy = "student")
     private List<Subject> studies = new ArrayList<>();
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private Person person;
 
 
 }

@@ -1,9 +1,11 @@
 package com.bosonit.block7crudvalidation.domain.entity;
 
 import com.bosonit.block7crudvalidation.infrastructure.controller.dto.output.PersonOutputDto;
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.Data;
 
+import javax.persistence.Entity;
+import java.time.Instant;
 import java.util.Date;
 @Entity
 @Data
@@ -23,7 +25,7 @@ public class Person {
     private String personal_email;
     private String city;
     private boolean active;
-    private Date created_date;
+    private Date created_date = Date.from(Instant.now());
     private String imagen_url;
     private Date termination_date;
 

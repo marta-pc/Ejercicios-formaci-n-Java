@@ -6,6 +6,7 @@ import com.bosonit.block7crudvalidation.infrastructure.controller.dto.input.Prof
 import com.bosonit.block7crudvalidation.infrastructure.controller.dto.output.ProfOutputDto;
 import com.bosonit.block7crudvalidation.infrastructure.mapper.ProfMapper;
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -49,10 +50,11 @@ public class ProfController {
         profService.deleteById(id);
     }
 
+    @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
     public void addProf(@RequestBody ProfInputDto profInputDto){
         Profesor profesor = ProfMapper.INSTANCE.profInputDtoToProfesor(profInputDto);
-        profService.addProf(profesor, profInputDto.getPersonaId());
+        profService.addProf(profesor);
 
     }
 

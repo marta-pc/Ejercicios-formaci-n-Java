@@ -35,23 +35,29 @@ public class StudentServiceImp implements StudentService{
     }
 
     @Override
-    public void addStudent(Student student, int personaId, int profesorId) {
-        Person persona = personService.getPersonById(personaId);
-        if(persona.getStudent() != null || persona.getProfesor() != null) {
-            throw new UnprocessableEntityException("El ID ya ha sido asignado");
-        }
-        student.setPersona(persona);
-        persona.setStudent(student);
-        student.setPersona(persona);
+    public void addStudent(Student student) {
+//        Person persona = personService.getPersonById(personaId);
+//        if(persona.getStudent() != null || persona.getProfesor() != null) {
+//            throw new UnprocessableEntityException("El ID ya ha sido asignado");
+//        }
+//        student.setPersona(persona);
+//        persona.setStudent(student);
+//        student.setPersona(persona);
 
-        Profesor profesor = profService.getById(profesorId);
-        student.setProfesor(profesor);
+//        Profesor profesor = profService.getById(profesorId);
+//        student.setProfesor(profesor);
+
+        Profesor profesor = student.getProfesor();
         List<Student> students = profesor.getStudents();
         students.add(student);
         profesor.setStudents(students);
 
+        Person person = student.getPerson();
+        person.setStudent(student);
+        student.setPerson(person);
+
         studentRepository.save(student);
-        profService.updateProf(profesorId, profesor);
+
     }
 
     @Override
@@ -64,10 +70,14 @@ public class StudentServiceImp implements StudentService{
 
     @Override
     public void updateStudent(int id, Student student) {
-        this.getById(id);
-
-        student.setId(id);
-        studentRepository.save(student);
+//        this.getById(id);
+//
+//        student.setId(id);
+//        studentRepository.save(student);
+        Student studentDB = this.getById(id);
+        studentDB.setComments(student.getComments());
+        studentDB.setBranch(student.getBranch());
+        studentRepository.save(studentDB);
     }
 
     @Override
