@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "7e0a15cb-d0a9-4676-8b87-8a16752b8627",
+		"name": "block7-crud-validation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24559919"
+	},
+	"item": [
+		{
+			"name": "getPersonaById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/persona/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"persona",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPersonaByUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/persona/usuario/Pablo",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"persona",
+						"usuario",
+						"Pablo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPeople",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/persona/registros",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"persona",
+						"registros"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuario\": \"sandra\",\r\n    \"password\": \"password\",\r\n    \"name\": \"Sandra\",\r\n    \"surname\": \"Napo\",\r\n    \"company_email\": \"napoleon\",\r\n    \"personal_email\": \"napole\",\r\n    \"city\": \"Sevilla\",\r\n    \"active\": true,\r\n    \"imagen_url\": \"perfil.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/persona/adduser",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"persona",
+						"adduser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletePersona",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/persona/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"persona",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePersona",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuario\": \"sandra2\",\r\n    \"password\": \"password\",\r\n    \"name\": \"Sandra\",\r\n    \"surname\": \"Napo\",\r\n    \"company_email\": \"napoleon\",\r\n    \"personal_email\": \"napole\",\r\n    \"city\": \"Sevilla\",\r\n    \"active\": true,\r\n    \"imagen_url\": \"perfil.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/persona/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"persona",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

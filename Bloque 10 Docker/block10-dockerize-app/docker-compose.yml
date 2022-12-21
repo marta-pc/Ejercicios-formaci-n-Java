@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  postgres1:
+    image: postgres
+    container_name: postgres1
+    environment:
+      - POSTGRES_PASSWORD=password
+    networks:
+      - mynetwork
+
+  block10:
+    image: block10dockerizeapp
+    networks:
+      - mynetwork
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres1
+networks:
+  mynetwork:
+    driver: bridge

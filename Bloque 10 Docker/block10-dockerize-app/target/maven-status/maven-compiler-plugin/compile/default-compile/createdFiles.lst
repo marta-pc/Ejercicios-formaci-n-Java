@@ -1,0 +1,8 @@
+com\example\block10dockerizeapp\controller\dto\PersonOutputDto.class
+com\example\block10dockerizeapp\Block10dockerizeapp.class
+com\example\block10dockerizeapp\domain\Person.class
+com\example\block10dockerizeapp\controller\dto\PersonInputDto.class
+com\example\block10dockerizeapp\application\PersonServiceImp.class
+com\example\block10dockerizeapp\repository\PersonRepository.class
+com\example\block10dockerizeapp\application\PersonService.class
+com\example\block10dockerizeapp\controller\Controller.class

@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="block7-crud (1)" />
         <module name="block6-simple-controllers" />
         <module name="block6-person-controllers" />
         <module name="block1-process-file-and-streams" />
@@ -33,6 +34,7 @@
       <module name="block6-person-controllers" options="-parameters" />
       <module name="block6-simple-controllers" options="-parameters" />
       <module name="block7-crud" options="-parameters" />
+      <module name="block7-crud (1)" options="-parameters" />
       <module name="block7-crud-validation" options="-parameters" />
     </option>
   </component>

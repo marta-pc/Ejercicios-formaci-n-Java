@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'com.example.block7-crud' is invalid and this project uses 'com.example.block7crud' instead.
+* The original package name 'com.example.block7-crud' is invalid and this project uses 'com.example.block10dockerizeapp' instead.
 
 # Getting Started
 
