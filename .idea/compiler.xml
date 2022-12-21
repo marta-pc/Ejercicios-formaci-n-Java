@@ -7,7 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="block7-crud (1)" />
+        <module name="block10-dockerize-app" />
         <module name="block6-simple-controllers" />
         <module name="block6-person-controllers" />
         <module name="block1-process-file-and-streams" />
@@ -31,10 +31,10 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="JPA-Cascade" options="-parameters" />
+      <module name="block10-dockerize-app" options="-parameters" />
       <module name="block6-person-controllers" options="-parameters" />
       <module name="block6-simple-controllers" options="-parameters" />
       <module name="block7-crud" options="-parameters" />
-      <module name="block7-crud (1)" options="-parameters" />
       <module name="block7-crud-validation" options="-parameters" />
     </option>
   </component>
