@@ -7,11 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="block7-crud" />
         <module name="block10-dockerize-app" />
+        <module name="block12-kafka-producer" />
         <module name="block6-simple-controllers" />
         <module name="block6-person-controllers" />
+        <module name="block12-kafka-consumer" />
         <module name="block1-process-file-and-streams" />
-        <module name="block7-crud" />
       </profile>
       <profile name="Annotation profile for block11-upload-download-files" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -36,6 +38,8 @@
       <module name="block10-dockerize-app" options="-parameters" />
       <module name="block11-cors" options="-parameters" />
       <module name="block11-upload-download-files" options="-parameters" />
+      <module name="block12-kafka-consumer" options="-parameters" />
+      <module name="block12-kafka-producer" options="-parameters" />
       <module name="block6-person-controllers" options="-parameters" />
       <module name="block6-simple-controllers" options="-parameters" />
       <module name="block7-crud" options="-parameters" />

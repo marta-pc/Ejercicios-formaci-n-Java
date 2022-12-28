@@ -1,0 +1,36 @@
+{
+	"info": {
+		"_postman_id": "e0a6250b-9257-44eb-ba42-6d9a73842cef",
+		"name": "Kafka",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Producer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "Mensaje",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/message",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"message"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

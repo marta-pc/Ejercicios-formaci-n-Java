@@ -13,6 +13,9 @@
         <option value="$PROJECT_DIR$/Bloque 10 Docker/block10-dockerize-app/pom.xml" />
         <option value="$PROJECT_DIR$/Bloque 11 Spring Web Avanzado/block11-cors/pom.xml" />
         <option value="$PROJECT_DIR$/Bloque 11 Spring Web Avanzado/block11-upload-download-files/pom.xml" />
+        <option value="$PROJECT_DIR$/Bloque 12 Kafka/block12-kafka-send/pom.xml" />
+        <option value="$PROJECT_DIR$/Bloque 12 Kafka/block12-kafka-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/Bloque 12 Kafka/block12-kafka-producer/pom.xml" />
       </list>
     </option>
   </component>
