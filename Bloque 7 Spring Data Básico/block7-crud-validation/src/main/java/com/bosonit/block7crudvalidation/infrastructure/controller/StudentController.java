@@ -24,7 +24,10 @@ public class StudentController {
     @PostMapping
     public void addStudent(@RequestBody StudentInputDto studentInputDto){
         Student student = StudentMapper.INSTANCE.studentInputDtoToStudent(studentInputDto);
-        studentService.addStudent(student);
+        int personId = studentInputDto.getPersonId();
+        int profId = studentInputDto.getProfId();
+
+        studentService.addStudent(student, personId, profId);
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)

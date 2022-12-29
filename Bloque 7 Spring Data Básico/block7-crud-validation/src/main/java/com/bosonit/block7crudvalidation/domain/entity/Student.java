@@ -22,15 +22,14 @@ public class Student {
 
     @OneToOne (cascade = CascadeType.ALL)
     @JoinColumn(name = "id_persona")
-    private Person persona;
-
+    private Person person;
 
     @Column(name = "num_hours_week")
     private int hours;
 
     private String comments;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.MERGE})
     @JoinColumn(name = "id_profesor")
     private Profesor profesor;
 
@@ -40,8 +39,6 @@ public class Student {
     @OneToMany(mappedBy = "student")
     private List<Subject> studies = new ArrayList<>();
 
-    @OneToOne(cascade = CascadeType.ALL)
-    private Person person;
 
 
 }

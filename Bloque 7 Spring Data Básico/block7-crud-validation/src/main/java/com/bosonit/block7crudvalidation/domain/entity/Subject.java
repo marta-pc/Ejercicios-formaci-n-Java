@@ -19,7 +19,7 @@ public class Subject {
     @Column(name = "id_asignatura")
     private int id;
 
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.MERGE})
     @JoinColumn(name = "id_student")
     private Student student;
 

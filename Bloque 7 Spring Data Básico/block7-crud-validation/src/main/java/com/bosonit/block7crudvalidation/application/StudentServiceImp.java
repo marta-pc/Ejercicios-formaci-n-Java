@@ -35,26 +35,19 @@ public class StudentServiceImp implements StudentService{
     }
 
     @Override
-    public void addStudent(Student student) {
-//        Person persona = personService.getPersonById(personaId);
-//        if(persona.getStudent() != null || persona.getProfesor() != null) {
-//            throw new UnprocessableEntityException("El ID ya ha sido asignado");
-//        }
-//        student.setPersona(persona);
-//        persona.setStudent(student);
-//        student.setPersona(persona);
+    public void addStudent(Student student,  int personId, int profId) {
+        Person person = personService.getPersonById(personId);
+        if(person.getStudent() != null || person.getProfesor() != null) {
+            throw new UnprocessableEntityException("El ID introducido ya está asignado");
+        }
+        student.setPerson(person);
+        person.setStudent(student);
 
-//        Profesor profesor = profService.getById(profesorId);
-//        student.setProfesor(profesor);
-
-        Profesor profesor = student.getProfesor();
+        Profesor profesor = profService.getById(profId);
+        student.setProfesor(profesor);
         List<Student> students = profesor.getStudents();
         students.add(student);
         profesor.setStudents(students);
-
-        Person person = student.getPerson();
-        person.setStudent(student);
-        student.setPerson(person);
 
         studentRepository.save(student);
 

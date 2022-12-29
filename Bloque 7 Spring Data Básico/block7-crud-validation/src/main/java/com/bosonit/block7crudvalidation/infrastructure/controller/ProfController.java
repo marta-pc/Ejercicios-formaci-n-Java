@@ -54,7 +54,7 @@ public class ProfController {
     @PostMapping
     public void addProf(@RequestBody ProfInputDto profInputDto){
         Profesor profesor = ProfMapper.INSTANCE.profInputDtoToProfesor(profInputDto);
-        profService.addProf(profesor);
+        profService.addProf(profesor, profInputDto.getPersonid());
 
     }
 

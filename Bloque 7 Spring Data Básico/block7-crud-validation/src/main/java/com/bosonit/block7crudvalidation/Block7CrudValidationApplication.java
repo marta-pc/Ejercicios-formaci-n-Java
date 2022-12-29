@@ -21,13 +21,13 @@ public class Block7CrudValidationApplication {
 		SpringApplication.run(Block7CrudValidationApplication.class, args);
 	}
 
-	@Autowired
-	ProfesorFeign profesorFeign;
-	 @Bean
-	 public CommandLineRunner getProfesorFeign (){
-	 	return args -> {
-	 		ProfOutputDto profOutputDto = profesorFeign.getById(1, "simple");
-	 		System.out.println(profOutputDto);
-	 	};
-	 }
+//	@Autowired
+//	ProfesorFeign profesorFeign;
+//	 @Bean
+//	 public CommandLineRunner getProfesorFeign (){
+//	 	return args -> {
+//	 		ProfOutputDto profOutputDto = profesorFeign.getById(1, "simple");
+//	 		System.out.println(profOutputDto);
+//	 	};
+//	 }
 }

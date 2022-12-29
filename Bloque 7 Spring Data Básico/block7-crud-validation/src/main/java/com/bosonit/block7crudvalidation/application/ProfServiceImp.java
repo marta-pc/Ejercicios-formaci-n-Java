@@ -34,17 +34,16 @@ public class ProfServiceImp implements ProfService{
     }
 
     @Override
-    public void addProf(Profesor profesor) {
-//        Person persona = personService.getPersonById();
-//        if(profesor.getPerson()!=null || persona.getProfesor()!=null){
-//            throw new UnprocessableEntityException("El ID introducido ya está asignado");
-//        }
-//        profesor.setPerson(profesor);
-//        profesor.setProfesor(profesor);
-        Person person = profesor.getPerson();
-        person.setProfesor(profesor);
+    public void addProf(Profesor profesor, int id) {
+        Person person = personService.getPersonById(id);
+        if(person.getStudent() != null || person.getProfesor() != null) {
+            throw new UnprocessableEntityException("El ID introducido ya está asignado");
+        }
         profesor.setPerson(person);
+        person.setProfesor(profesor);
+
         profRepository.save(profesor);
+
     }
 
     @Override

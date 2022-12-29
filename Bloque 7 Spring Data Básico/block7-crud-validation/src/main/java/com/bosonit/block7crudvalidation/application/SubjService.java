@@ -9,7 +9,7 @@ import java.util.List;
 public interface SubjService {
     Subject getById(int id);
     List<Subject> getAll();
-    void addSubject(Subject subject, int id);
+    void addSubject(Subject subject, int profId);
     void deleteByStudent(int studentId);
     void updateSubj(int id, Subject subject);
     List<Subject> findByStudent(int studentId);

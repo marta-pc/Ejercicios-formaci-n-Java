@@ -6,6 +6,7 @@ import com.bosonit.block7crudvalidation.domain.entity.Subject;
 import com.bosonit.block7crudvalidation.domain.exception.EntityNotFoundException;
 import com.bosonit.block7crudvalidation.domain.repository.SubjRepository;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.Objects;
 
 @Service
 @AllArgsConstructor
+@Slf4j
 public class SubjServiceImp implements SubjService {
 
     private  StudentService studentService;
@@ -25,36 +27,24 @@ public class SubjServiceImp implements SubjService {
 
     @Override
     public List<Subject> getAll() {
+
         return subjRepository.findAll();
     }
 
-//    @Override
-//    public void addSubject(Subject subject) {
-//
-//        Student student = subject.getStudent();
-//        List<Subject> studies = student.getStudies();
-//        studies.add(subject);
-//        student.setStudies(studies);
-//
-////        Person person = subject.getStudent().getPerson();
-////        person.setStudent(student);
-////        subject.setStudent(student);
-////        student.setPerson(person);
-//
-//        subjRepository.save(subject);
-//            studentService.updateStudent(student.getId(), student);
     @Override
-    public void addSubject(Subject subject, int id) {
 
-//        Student student = subject.getStudent();
-        Student student = studentService.getById(id);
+    public void addSubject(Subject subject, int studentId) {
+
+        log.info("saving subject with data {} student with id {}", subject, studentId);
+
+        Student student = studentService.getById(studentId);
         subject.setStudent(student);
+
         List<Subject> studies = student.getStudies();
         studies.add(subject);
         student.setStudies(studies);
-        subjRepository.save(subject);
-        studentService.updateStudent(student.getId(), student);
 
+        subjRepository.save(subject);
 
 
     }

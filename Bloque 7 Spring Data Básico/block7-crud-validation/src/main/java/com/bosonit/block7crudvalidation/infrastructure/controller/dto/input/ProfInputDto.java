@@ -8,6 +8,6 @@ public class ProfInputDto {
     private int id;
     private String comments;
     private String branch;
-    private PersonInputDto person;
+    private int personid;
 
 }
