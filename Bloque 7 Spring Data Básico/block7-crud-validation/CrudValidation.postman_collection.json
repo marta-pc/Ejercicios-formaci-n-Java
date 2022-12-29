@@ -15,7 +15,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"person\": {\r\n        \"usuario\": \"Pablo\",\r\n        \"password\": \"password\",\r\n        \"name\": \"Pablo\",\r\n        \"surname\": \"Napo\",\r\n        \"company_email\": \"napole\",\r\n        \"personal_email\": \"d\",\r\n        \"city\": \"Sevilla\",\r\n        \"active\": false,\r\n        \"imagen_url\": \"asd\"\r\n    },\r\n    \"comments\": \"El mejor profesor del mundo\",\r\n    \"branch\": \"Backend\",\r\n\r\n    \"profesor\": {\r\n        \"person\": {\r\n            \"usuario\": \"Pablo\",\r\n            \"password\": \"password\",\r\n            \"name\": \"Pablo\",\r\n            \"surname\": \"Napo\",\r\n            \"company_email\": \"napole\",\r\n            \"personal_email\": \"d\",\r\n            \"city\": \"Sevilla\",\r\n            \"active\": false,\r\n            \"imagen_url\": \"asd\"\r\n        },\r\n        \"comments\": \"El mejor profesor del mundo\",\r\n        \"branch\": \"Backend\"\r\n    }\r\n}",
+							"raw": "{\r\n    \"personId\": 2,\r\n    \"comments\": \"El mejor profesor del mundo\",\r\n    \"branch\": \"Backend\",\r\n    \"profId\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -70,7 +70,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"comments\": \"fcdgfsg\",\r\n    \"branch\": \"Backend\"\r\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -109,14 +109,14 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/estudiante/2?ouputType=full",
+							"raw": "localhost:8080/estudiante/1?ouputType=full",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
 								"estudiante",
-								"2"
+								"1"
 							],
 							"query": [
 								{
@@ -146,20 +146,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/estudiante/2?ouputType=full",
+							"raw": "localhost:8080/estudiante",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"estudiante",
-								"2"
-							],
-							"query": [
-								{
-									"key": "ouputType",
-									"value": "full"
-								}
+								"estudiante"
 							]
 						}
 					},
@@ -177,7 +170,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"person\": {\r\n        \"usuario\": \"Pablo\",\r\n        \"password\": \"password\",\r\n        \"name\": \"Pablo\",\r\n        \"surname\": \"Napo\",\r\n        \"company_email\": \"napole\",\r\n        \"personal_email\": \"d\",\r\n        \"city\": \"Sevilla\",\r\n        \"active\": false,\r\n        \"imagen_url\": \"asd\"\r\n    },\r\n    \"comments\": \"El mejor profesor del mundo\",\r\n    \"branch\": \"Backend\",\r\n\r\n    \"profesor\": {\r\n        \"person\": {\r\n            \"usuario\": \"Pablo\",\r\n            \"password\": \"password\",\r\n            \"name\": \"Pablo\",\r\n            \"surname\": \"Napo\",\r\n            \"company_email\": \"napole\",\r\n            \"personal_email\": \"d\",\r\n            \"city\": \"Sevilla\",\r\n            \"active\": false,\r\n            \"imagen_url\": \"asd\"\r\n        },\r\n        \"comments\": \"El mejor profesor del mundo\",\r\n        \"branch\": \"Backend\"\r\n    }\r\n}",
+							"raw": "{\r\n    \"comments\": \"El mejor profesor del mundo\",\r\n    \"subject\": \"Backend\",\r\n    \"studentId\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -185,13 +178,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/estudiante",
+							"raw": "localhost:8080/asignaturas",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"estudiante"
+								"asignaturas"
 							]
 						}
 					},
@@ -204,7 +197,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"comments\": \"fcdgfsg\",\r\n    \"branch\": \"Backend\"\r\n}",
+							"raw": "{\r\n    \"subject\": \"asdf\",\r\n    \"comments\": \"comement1\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -212,13 +205,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/estudiante/1",
+							"raw": "localhost:8080/asignaturas/1",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"estudiante",
+								"asignaturas",
 								"1"
 							]
 						}
@@ -240,13 +233,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/estudiante/1",
+							"raw": "localhost:8080/asignaturas/1",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"estudiante",
+								"asignaturas",
 								"1"
 							]
 						}
@@ -271,20 +264,14 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/estudiante/2?ouputType=full",
+							"raw": "localhost:8080/asignaturas/1",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"estudiante",
-								"2"
-							],
-							"query": [
-								{
-									"key": "ouputType",
-									"value": "full"
-								}
+								"asignaturas",
+								"1"
 							]
 						}
 					},
@@ -308,20 +295,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/estudiante/2?ouputType=full",
+							"raw": "localhost:8080/asignaturas",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"estudiante",
-								"2"
-							],
-							"query": [
-								{
-									"key": "ouputType",
-									"value": "full"
-								}
+								"asignaturas"
 							]
 						}
 					},
@@ -339,7 +319,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"person\": {\r\n        \"usuario\": \"Pablo\",\r\n        \"password\": \"password\",\r\n        \"name\": \"Pablo\",\r\n        \"surname\": \"Napo\",\r\n        \"company_email\": \"napole\",\r\n        \"personal_email\": \"d\",\r\n        \"city\": \"Sevilla\",\r\n        \"active\": false,\r\n        \"imagen_url\": \"asd\"\r\n    },\r\n\r\n    \"comments\": \"El mejor profesor del mundo\",\r\n    \"branch\": \"Backend\"\r\n}",
+							"raw": "{\r\n    \"personid\": 1,\r\n    \"comments\": \"El mejor profesor del mundo\",\r\n    \"branch\": \"Backend\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -529,14 +509,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/persona/1",
+							"raw": "localhost:8080/persona/2",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
 								"persona",
-								"1"
+								"2"
 							]
 						}
 					},
@@ -548,14 +528,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/persona/1",
+							"raw": "localhost:8080/persona/personas",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
 								"persona",
-								"1"
+								"personas"
 							]
 						}
 					},
