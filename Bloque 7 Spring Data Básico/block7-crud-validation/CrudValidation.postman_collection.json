@@ -540,6 +540,64 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "searchByFields",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/persona/fields?name=Pablo&dateCondition=greater&created_date=2022-12-30T12:38:56.054+00:00",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"persona",
+								"fields"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Pablo"
+								},
+								{
+									"key": "dateCondition",
+									"value": "greater"
+								},
+								{
+									"key": "created_date",
+									"value": "2022-12-30T12:38:56.054+00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPeoplePagination",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/persona/paginated?offset=0",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"persona",
+								"paginated"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
