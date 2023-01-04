@@ -37,10 +37,8 @@ public class PersonServiceImp implements PersonService{
     private EntityManager entityManager;
 
     @Override
-    public PersonOutputDto addPerson(PersonInputDto person){
-
-        Person person1 = personRepository.save(PersonMapper.Instance.personInputDtoToPerson(person));
-        return PersonMapper.Instance.personToPersonOutputDto(person1);
+    public Person addPerson(Person person){
+        return personRepository.save(person);
     }
 
     @Override
@@ -51,18 +49,19 @@ public class PersonServiceImp implements PersonService{
 
     @Override
     public void deletePersonById(int id) {
-        personRepository.findById(id).orElseThrow();
+        getPersonById(id);
         personRepository.deleteById(id);
     }
     @Override
     public List<Person> getPeople() {
+
         return personRepository.findAll();
     }
 
 
     @Override
     public Person updatePerson(int id, Person person) {
-        personRepository.findById(id).orElseThrow();
+        getPersonById(id);
         person.setId(id);
         return personRepository.save(person);
     }

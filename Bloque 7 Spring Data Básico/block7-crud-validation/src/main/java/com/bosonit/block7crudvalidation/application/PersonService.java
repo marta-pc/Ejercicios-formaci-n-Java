@@ -11,7 +11,7 @@ import java.util.List;
 
 public interface PersonService {
 
-    PersonOutputDto addPerson(PersonInputDto person);
+    Person addPerson(Person person);
 
     Person getPersonById(int id);
 

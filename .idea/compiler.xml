@@ -15,7 +15,7 @@
         <module name="block12-kafka-consumer" />
         <module name="block1-process-file-and-streams" />
       </profile>
-      <profile name="Annotation profile for block13-mongodb" enabled="true">
+      <profile name="Annotation profile for block7-crud-validation" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />

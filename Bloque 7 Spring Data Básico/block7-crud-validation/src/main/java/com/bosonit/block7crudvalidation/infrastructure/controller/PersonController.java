@@ -29,7 +29,9 @@ public class PersonController {
     @PostMapping
     public ResponseEntity<PersonOutputDto> addPerson(@RequestBody PersonInputDto person) {
         URI location = URI.create("/person");
-        return ResponseEntity.created(location).body(personService.addPerson(person));
+        Person person1 = PersonMapper.Instance.personInputDtoToPerson(person);
+        PersonOutputDto person2 = PersonMapper.Instance.personToPersonOutputDto(personService.addPerson(person1));
+        return ResponseEntity.created(location).body(person2);
     }
 
 
@@ -63,7 +65,6 @@ public class PersonController {
 
 
 
-
     @GetMapping("/personas")
     public List<PersonOutputDto> getPeople(){
 
@@ -87,11 +88,11 @@ public class PersonController {
 
 
     @GetMapping("/paginated")
-    public Page<Person> searchAllWithPagination(@RequestParam(value = "offset") int offset,
+    public Page<PersonOutputDto> searchAllWithPagination(@RequestParam(value = "offset") int offset,
                                                 @RequestParam(value = "pageSize", defaultValue = "10") int pageSize) {
         Page<Person> people = personService.getPeoplePagination(offset, pageSize);
 
-        return people;
+        return people.map(PersonMapper.Instance::personToPersonOutputDto);
     }
 
 }
